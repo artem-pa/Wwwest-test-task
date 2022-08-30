@@ -17,7 +17,35 @@
 </head>
 
 <body>
-  <header></header>
+  <header class="header px-3 py-3 m-0 border-bottom">
+    <div class="container row align-items-center justify-content-between">
+      <div class="col-6 d-flex align-items-center justify-content-start p-0">
+        <a href="#" class="logo text-uppercase text-decoration-none">Morent</a>
+        <div class="search input-group position-relative">
+          <input class="form-control px-5" type="search" placeholder="Search something here">
+          <i class="bi bi-search button ms-3 position-absolute top-50 start-0 translate-middle-y"></i>
+          <i class="bi bi-sliders button me-3 position-absolute top-50 end-0 translate-middle-y"></i>
+        </div>
+      </div>
+
+      <nav class="nav col-3 d-flex justify-content-end">
+        <a href="#" class="nav-link d-flex align-items-center justify-content-center text-decoration-none rounded-circle position-relative">
+          <i class="bi bi-heart-fill"></i>
+        </a>
+        <a href="#" class="nav-link d-flex align-items-center justify-content-center text-decoration-none rounded-circle position-relative">
+          <i class="bi bi-bell-fill"></i>
+          <div class="red-dot position-absolute top-0 end-0"></div>
+        </a>
+        <a href="#" class="nav-link d-flex align-items-center justify-content-center text-decoration-none rounded-circle position-relative">
+          <i class="bi bi-gear-fill"></i>
+        </a>
+        <a href="#" class="nav-link rounded-circle position-relative overflow-hidden p-0">
+          <img src="./images/profile/profile-01.png" class="img-fluid" alt="profile image">
+        </a>
+      </nav>
+    </div>
+  </header>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
