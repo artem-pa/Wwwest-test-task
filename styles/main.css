@@ -1,3 +1,28 @@
+:root {
+  --bs-btn-bg: #3563E9;
+  --bs-btn-border-color: #3563E9;
+}
+
+@media screen and (min-width: 1400px) {
+  .container-xxl {
+    max-width: min(100%, 1440px);
+  }
+}
+
+.p-4 {
+  padding: 2rem !important;
+}
+
+.px-4 {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+.py-4 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
 html,
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -9,9 +34,6 @@ body {
   background: #FFFFFF;
 }
 
-header {
-  background: #FFFFFF;
-}
 header .search {
   height: 44px;
 }
@@ -70,6 +92,10 @@ main .sidebar .filter .filter-item {
   font-size: 20px;
   color: #3D5278;
 }
+main .sidebar .filter .filter-item input:checked {
+  background-color: #3563E9;
+  border-color: #3563E9;
+}
 main .sidebar .filter .filter-item span {
   color: #90A3BF;
 }
@@ -82,6 +108,108 @@ main .sidebar .filter .range input::-webkit-slider-thumb {
   height: 20px;
   border: 3px solid #FFFFFF;
   background: #3563E9;
+}
+main .content {
+  background: #f6f7f9;
+}
+main .content .preview {
+  column-gap: 2rem;
+}
+main .content .preview .images {
+  row-gap: 24px;
+}
+main .content .preview .images .bg {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  background-size: cover;
+  background-position: center;
+}
+main .content .preview .images .bg .title {
+  font-weight: 600;
+  font-size: 32px;
+  color: #FFFFFF;
+}
+main .content .preview .images .bg .description {
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+main .content .preview .images__item {
+  width: 125px;
+  height: 125px;
+  border: 0 solid #3563E9;
+  transition: 0.3s;
+  cursor: pointer;
+}
+main .content .preview .images__item .bg {
+  padding: 0 6px;
+}
+main .content .preview .images__item .bg .text {
+  display: none;
+}
+main .content .preview .images__item.active {
+  border: 2px solid #3563E9;
+  padding: 8px !important;
+}
+main .content .preview .images__item.active .bg {
+  border-radius: inherit;
+}
+main .content .preview .info {
+  padding: 24px 24px 32px;
+}
+main .content .preview .info__header .title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1A202C;
+}
+main .content .preview .info__header .reviewer {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3D5278;
+}
+main .content .preview .info__description {
+  margin: 32px 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 200%;
+  letter-spacing: -0.02em;
+  color: #3D5278;
+}
+main .content .preview .info__specification {
+  font-size: 20px;
+  line-height: 25px;
+  row-gap: 1rem;
+  margin-bottom: 4rem;
+}
+main .content .preview .info__specification .name {
+  font-weight: 400;
+  color: #90A3BF;
+  text-align: start;
+}
+main .content .preview .info__specification .value {
+  font-weight: 600;
+  color: #3D5278;
+  text-align: end;
+}
+main .content .preview .info__rent .price .primary {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+  color: #1A202C;
+}
+main .content .preview .info__rent .price .secondary {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #90A3BF;
+}
+main .content .preview .info__rent .button {
+  width: 140px;
+  height: 56px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
 .logo {
@@ -97,4 +225,21 @@ main .sidebar .filter .range input::-webkit-slider-thumb {
 }
 .button:active {
   scale: 0.8;
+}
+
+.heart-icon {
+  font-size: 17px;
+  color: #ED3F3F;
+}
+
+.stars {
+  display: inline-flex;
+  list-style: none;
+  gap: 5px;
+}
+.stars .bi-star-fill {
+  color: #fbad39;
+}
+.stars .bi-star {
+  color: #C3D4E9;
 }/*# sourceMappingURL=main.css.map */

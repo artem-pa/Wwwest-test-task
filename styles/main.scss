@@ -1,4 +1,5 @@
 @import "variables";
+@import "bootstrap";
 
 html,
 body {
@@ -12,7 +13,6 @@ body {
 }
 
 header {
-  background: $white;
   .search {
     height: 44px;
     input {
@@ -74,6 +74,10 @@ main {
       .filter-item {
         font-size: 20px;
         color: $secondary;
+        input:checked {
+          background-color: $primary;
+          border-color: $primary;
+        }
         span {
           color: $gray;
         }
@@ -94,6 +98,128 @@ main {
       }
     }
   }
+
+  .content {
+    background: #f6f7f9;
+    .preview {
+      column-gap: 2rem;
+      .images {
+        row-gap: 24px;
+        .bg {
+          width: 100%;
+          height: 100%;
+          padding: 24px;
+          background-size: cover;
+          background-position: center;
+          .title {
+            font-weight: 600;
+            font-size: 32px;
+            color: $white;
+          }
+          .description {
+            font-weight: 500;
+            font-size: 16px;
+            color: $white;
+          }
+        }
+
+        &__item {
+          width: 125px;
+          height: 125px;
+          border: 0 solid $primary;
+          transition: 0.3s;
+          cursor: pointer;
+          // --bg-path: url("../images/cars-view/view-bg.svg");
+          // &:nth-child(2) {
+          //   --bg-path: url("../images/cars-view/view-01.png");
+          // }
+          // &:nth-child(3) {
+          //   --bg-path: url("../images/cars-view/view-02.png");
+          // }
+          .bg {
+            padding: 0 6px;
+            .text {
+              display: none;
+            }
+          }
+          &.active {
+            border: 2px solid $primary;
+            padding: 8px !important;
+            .bg {
+              border-radius: inherit;
+            }
+          }
+        }
+      }
+
+      .info {
+        padding: 24px 24px 32px;
+        &__header {
+          .title {
+            font-size: 32px;
+            font-weight: 700;
+            color: $dark;
+          }
+          .reviewer {
+            font-size: 14px;
+            font-weight: 500;
+            color: $secondary;
+          }
+        }
+
+        &__description {
+          margin: 32px 0;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 200%;
+          letter-spacing: -0.02em;
+          color: $secondary;
+        }
+
+        &__specification {
+          font-size: 20px;
+          line-height: 25px;
+          row-gap: 1rem;
+          margin-bottom: 4rem;
+          .name {
+            font-weight: 400;
+            color: $gray;
+            text-align: start;
+          }
+          .value {
+            font-weight: 600;
+            color: $secondary;
+            text-align: end;
+          }
+        }
+
+        &__rent {
+          .price {
+            .primary {
+              font-weight: 700;
+              font-size: 28px;
+              line-height: 35px;
+              color: $dark;
+            }
+            .secondary {
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 20px;
+              color: $gray;
+            }
+          }
+
+          .button {
+            width: 140px;
+            height: 56px;
+            font-size: 17px;
+            font-weight: 700;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
 }
 
 .logo {
@@ -107,5 +233,20 @@ main {
   transition: 0.5s;
   &:active {
     scale: 0.8;
+  }
+}
+.heart-icon {
+  font-size: 17px;
+  color: $red;
+}
+.stars {
+  display: inline-flex;
+  list-style: none;
+  gap: 5px;
+  .bi-star-fill {
+    color: #fbad39;
+  }
+  .bi-star {
+    color: $secondary-light;
   }
 }
