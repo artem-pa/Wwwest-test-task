@@ -13,6 +13,18 @@ body {
 }
 
 header {
+  .navbar-toggler {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 30px;
+    border: 2px solid transparent;
+    color: $secondary;
+    font-size: 32px;
+    transition: 0.3s;
+    &:focus {
+      border: 2px solid $gray;
+    }
+  }
   .search {
     height: 44px;
     input {
@@ -61,9 +73,12 @@ main {
     width: 360px;
     border-right: 1px solid #f3f5f7;
     row-gap: 56px;
+    .btn-close {
+      font-size: 1.5rem;
+    }
     .filter {
       .title {
-        font-size: 12px;
+        font-size: 0.75rem;
         color: #94a7cb;
         margin-bottom: 28px;
       }
@@ -72,7 +87,7 @@ main {
         row-gap: 32px;
       }
       .filter-item {
-        font-size: 20px;
+        font-size: 1.25rem;
         color: $secondary;
         input:checked {
           background-color: $primary;
@@ -115,6 +130,7 @@ main {
             font-weight: 600;
             font-size: 32px;
             color: $white;
+            max-width: 89%;
           }
           .description {
             font-weight: 500;
@@ -129,13 +145,6 @@ main {
           border: 0 solid $primary;
           transition: 0.3s;
           cursor: pointer;
-          // --bg-path: url("../images/cars-view/view-bg.svg");
-          // &:nth-child(2) {
-          //   --bg-path: url("../images/cars-view/view-01.png");
-          // }
-          // &:nth-child(3) {
-          //   --bg-path: url("../images/cars-view/view-02.png");
-          // }
           .bg {
             padding: 0 6px;
             .text {
@@ -223,7 +232,6 @@ main {
 }
 
 .logo {
-  margin-right: 64px;
   font-size: 2rem;
   font-weight: 700;
   color: $primary;
@@ -248,5 +256,35 @@ main {
   }
   .bi-star {
     color: $secondary-light;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  main {
+    .sidebar {
+      width: 210px;
+      .filter {
+        .filter-item {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .content {
+      .preview .images__item {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1199px) {
+  main {
+    .sidebar {
+      width: 50%!important;
+      .filter .filter-item {
+        font-size: 1.25rem;
+      }
+    }
   }
 }

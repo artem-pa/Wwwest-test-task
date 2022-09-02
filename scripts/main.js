@@ -13,7 +13,7 @@ const setPreview = (event) => {
 
 const root = () => {
   getS('.preview .images__item').forEach((el, i) => {
-    el.children[0].style.backgroundImage = `url('../images/cars-view/${el.dataset.bg}')`;
+    el.children[0].style.backgroundImage = `url('images/cars-view/${el.dataset.bg}')`;
     el.addEventListener('click', setPreview)
     if (i === 0) setPreview();
   })

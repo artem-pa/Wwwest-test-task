@@ -1,6 +1,6 @@
 @import 'variables';
 
-:root {
+.btn-primary {
   --bs-btn-bg: #{$primary};
   --bs-btn-border-color: #{$primary};
 }
@@ -10,7 +10,6 @@
     max-width: min(100%, 1440px);
   }
 }
-
 .p-4 {
   padding: 2rem!important;
 }

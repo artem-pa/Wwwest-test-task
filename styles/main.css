@@ -1,4 +1,4 @@
-:root {
+.btn-primary {
   --bs-btn-bg: #3563E9;
   --bs-btn-border-color: #3563E9;
 }
@@ -34,6 +34,18 @@ body {
   background: #FFFFFF;
 }
 
+header .navbar-toggler {
+  height: 40px;
+  width: 40px;
+  margin-bottom: 30px;
+  border: 2px solid transparent;
+  color: #3D5278;
+  font-size: 32px;
+  transition: 0.3s;
+}
+header .navbar-toggler:focus {
+  border: 2px solid #90A3BF;
+}
 header .search {
   height: 44px;
 }
@@ -79,8 +91,11 @@ main .sidebar {
   border-right: 1px solid #f3f5f7;
   row-gap: 56px;
 }
+main .sidebar .btn-close {
+  font-size: 1.5rem;
+}
 main .sidebar .filter .title {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #94a7cb;
   margin-bottom: 28px;
 }
@@ -89,7 +104,7 @@ main .sidebar .filter .list {
   row-gap: 32px;
 }
 main .sidebar .filter .filter-item {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #3D5278;
 }
 main .sidebar .filter .filter-item input:checked {
@@ -129,6 +144,7 @@ main .content .preview .images .bg .title {
   font-weight: 600;
   font-size: 32px;
   color: #FFFFFF;
+  max-width: 89%;
 }
 main .content .preview .images .bg .description {
   font-weight: 500;
@@ -213,7 +229,6 @@ main .content .preview .info__rent .button {
 }
 
 .logo {
-  margin-right: 64px;
   font-size: 2rem;
   font-weight: 700;
   color: #3563E9;
@@ -242,4 +257,25 @@ main .content .preview .info__rent .button {
 }
 .stars .bi-star {
   color: #C3D4E9;
+}
+
+@media screen and (max-width: 1399px) {
+  main .sidebar {
+    width: 210px;
+  }
+  main .sidebar .filter .filter-item {
+    font-size: 1rem;
+  }
+  main .content .preview .images__item {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  main .sidebar {
+    width: 50% !important;
+  }
+  main .sidebar .filter .filter-item {
+    font-size: 1.25rem;
+  }
 }/*# sourceMappingURL=main.css.map */
