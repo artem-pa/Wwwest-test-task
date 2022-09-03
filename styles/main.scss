@@ -117,7 +117,7 @@ main {
   .content {
     background: #f6f7f9;
     .preview {
-      column-gap: 2rem;
+      gap: 2rem;
       .images {
         row-gap: 24px;
         .bg {
@@ -281,9 +281,149 @@ main {
 @media screen and (max-width: 1199px) {
   main {
     .sidebar {
-      width: 50%!important;
+      width: 50% !important;
       .filter .filter-item {
         font-size: 1.25rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  header {
+    & > .container-xxl {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
+
+    .search {
+      input {
+        border-radius: 10px !important;
+      }
+      .bi-sliders {
+        position: static !important;
+        width: 48px;
+        height: 48px;
+        line-height: 44px;
+        border: 1px solid rgba(195, 212, 233, 0.4);
+        text-align: center;
+        transform: none !important;
+      }
+    }
+  }
+
+  main {
+    .content {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+      .images {
+        &__preview {
+          height: 415px;
+        }
+        &__list {
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    .navbar-toggler {
+      width: 25px;
+      height: 25px;
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+    .nav .nav-link {
+      width: 28px;
+      height: 28px;
+      img {
+        vertical-align: baseline;
+      }
+    }
+  }
+
+  main {
+    .sidebar {
+      width: 75% !important;
+      .filter .filter-item {
+        font-size: 1rem;
+      }
+    }
+
+    .content {
+      .preview {
+        .images {
+          &__preview {
+            height: 235px;
+            img {
+              height: 100px;
+            }
+          }
+          .bg .title {
+            font-size: 16px;
+          }
+          .bg .description {
+            font-size: 12px;
+          }
+        }
+
+        .info {
+          padding: 16px;
+          &__header {
+            .title {
+              font-size: 20px;
+            }
+            .reviewer {
+              font-size: 12px;
+            }
+          }
+          &__description {
+            margin: 16px 0;
+            font-size: 12px;
+            line-height: 20px;
+          }
+          &__specification {
+            font-size: 12px;
+            margin-bottom: 2rem;
+            .name {
+              font-weight: 500;
+            }
+          }
+          &__rent {
+            .price {
+              .primary {
+                font-size: 20px;
+              }
+              .secondary {
+                font-size: 12px;
+              }
+            }
+            .button {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+  .stars {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 575px) {
+  main {
+    .content .preview .images {
+      &__preview img {
+        height: 60px;
+      }
+      &__item {
+        height: 64px;
+        width: 64px;
       }
     }
   }
