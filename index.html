@@ -166,7 +166,7 @@
         </div>
       </div>
 
-      <div class="content flex-fill p-4">
+      <div class="content d-flex flex-column p-4">
         <div class="preview flex-shrink-1 d-flex flex-wrap flex-lg-nowrap m-0">
           <div class="images col-xxl-6 col-lg-5 col-12 d-flex flex-column justify-content-between">
             <div class="images__preview flex-fill rounded-3 overflow-hidden">
@@ -215,13 +215,15 @@
               NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving
               proving ground, the "race track".
             </p>
-            <div class="info__specification row">
+            <div class="info__specification d-flex flex-wrap">
               <div class="name col-3">Type Car</div>
-              <div class="value col-3">Sport</div>
+              <div class="value col-2">Sport</div>
+              <div class="col-1"></div>
               <div class="name col-3">Capacity</div>
               <div class="value col-3">2 Person</div>
               <div class="name col-3">Steering</div>
-              <div class="value col-3">Manual</div>
+              <div class="value col-2">Manual</div>
+              <div class="col-1"></div>
               <div class="name col-3">Gasoline</div>
               <div class="value col-3">70 L</div>
             </div>
@@ -233,6 +235,125 @@
               <button type="button" class="button btn btn-primary">Rent Now</button>
             </div>
           </div>
+        </div>
+
+        <div class="reviews rounded-3 bg-white">
+          <h2 class="reviews__title">
+            Reviews<span class="badge bg-primary d-inline-flex justify-content-center align-items-center">13</span>
+          </h2>
+          <ul class="reviews__list list-group">
+            <li class="reviews__item d-flex">
+              <div class="review__image flex-shrink-0 me-3">
+                <img src="./images/profile/profile-01.png" alt="profile" class="img-fluid rounded-circle">
+              </div>
+              <div class="review">
+                <div class="review__header d-flex justify-content-between">
+                  <div class="review__author d-flex flex-column">
+                    <p class="name mb-2">Alex Stanton</p>
+                    <p class="position mb-0">CEO at Bukalapak</p>
+                  </div>
+                  <div class="review__data d-flex flex-column align-items-end">
+                    <p class="date mb-2">21 July 2022</p>
+                    <ul class="stars p-0 m-0">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                    </ul>
+                  </div>
+                </div>
+                <div class="review__text">
+                  We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item d-flex">
+              <div class="review__image flex-shrink-0 me-3">
+                <img src="./images/profile/profile-02.png" alt="profile" class="img-fluid rounded-circle">
+              </div>
+              <div class="review">
+                <div class="review__header d-flex justify-content-between">
+                  <div class="review__author d-flex flex-column">
+                    <p class="name mb-2">Skylar Dias</p>
+                    <p class="position mb-0">CEO at Amazon</p>
+                  </div>
+                  <div class="review__data d-flex flex-column align-items-end">
+                    <p class="date mb-2">20 July 2022</p>
+                    <ul class="stars p-0 m-0">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                    </ul>
+                  </div>
+                </div>
+                <div class="review__text">
+                  We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.
+                </div>
+              </div>
+            </li>
+            <div class="collapse" id="collapseReviews">
+              <div class="reviews__list d-flex flex-column">
+                <li class="reviews__item d-flex">
+                  <div class="review__image flex-shrink-0 me-3">
+                    <img src="./images/profile/profile-anon.svg" alt="profile" class="img-fluid rounded-circle">
+                  </div>
+                  <div class="review">
+                    <div class="review__header d-flex justify-content-between">
+                      <div class="review__author d-flex flex-column">
+                        <p class="name mb-2">Anonymous User</p>
+                        <p class="position mb-0">unknown</p>
+                      </div>
+                      <div class="review__data d-flex flex-column align-items-end">
+                        <p class="date mb-2">30 June 2022</p>
+                        <ul class="stars p-0 m-0">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star"></i>
+                          <i class="bi bi-star"></i>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="review__text">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, accusamus illo? Doloremque fugiat quaerat cum debitis assumenda laboriosam, cupiditate esse quisquam officiis, dolore non dignissimos nihil reprehenderit quo enim quam repellat, eos obcaecati quibusdam. Sit?
+                    </div>
+                  </div>
+                </li>
+                <li class="reviews__item d-flex">
+                  <div class="review__image flex-shrink-0 me-3">
+                    <img src="./images/profile/profile-anon.svg" alt="profile" class="img-fluid rounded-circle">
+                  </div>
+                  <div class="review">
+                    <div class="review__header d-flex justify-content-between">
+                      <div class="review__author d-flex flex-column">
+                        <p class="name mb-2">Anonymous User</p>
+                        <p class="position mb-0">unknown</p>
+                      </div>
+                      <div class="review__data d-flex flex-column align-items-end">
+                        <p class="date mb-2">25 June 2022</p>
+                        <ul class="stars p-0 m-0">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="review__text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi corrupti quia iure incidunt exercitationem quibusdam quo quae consectetur omnis cumque.
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </div>
+            <button type="button" class="reviews__btn accordion-button mx-auto" data-bs-toggle="collapse" data-bs-target="#collapseReviews" aria-expanded="false" aria-controls="collapseReviews">
+              <i class="bi bi-chevron-down ms-2"></i>
+            </button>
+          </ul>
         </div>
       </div>
     </div>

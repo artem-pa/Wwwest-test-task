@@ -4,6 +4,8 @@
 html,
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  color: $dark;
   background: #f6f7f9;
 }
 
@@ -116,6 +118,7 @@ main {
 
   .content {
     background: #f6f7f9;
+    gap: 32px;
     .preview {
       gap: 2rem;
       .images {
@@ -225,6 +228,89 @@ main {
             font-weight: 700;
             color: $white;
           }
+        }
+      }
+    }
+
+    .reviews {
+      padding: 24px;
+      &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 32px;
+        .badge {
+          width: 44px;
+          height: 28px;
+          font-size: 14px;
+          font-weight: 700;
+          margin-left: 12px;
+        }
+      }
+      &__list {
+        list-style: none;
+        row-gap: 24px;
+      }
+      &__btn {
+        width: fit-content;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray;
+        .bi {
+          transition: 0.15s;
+        }
+        &[aria-expanded="false"] {
+          .bi {
+            transform: rotate(0deg);
+          }
+          &::before {
+            content: "Show All";
+          }
+        }
+        &[aria-expanded="true"] {
+          .bi {
+            transform: rotate(180deg);
+          }
+          &::before {
+            content: "Hide All";
+          }
+        }
+      }
+      .review {
+        &__image {
+          width: 56px;
+          height: 56px;
+        }
+        &__header {
+          margin-bottom: 12px;
+        }
+        &__author {
+          .name {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+          }
+          .position {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray;
+          }
+        }
+        &__data {
+          .date {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray;
+          }
+        }
+        &__text {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 200%;
+          color: $secondary;
         }
       }
     }
@@ -402,6 +488,55 @@ main {
             .button {
               font-size: 16px;
             }
+          }
+        }
+      }
+
+      .reviews {
+        padding: 16px 16px 24px;
+        &__title {
+          margin-bottom: 24px;
+        }
+        &__list {
+          row-gap: 20px;
+        }
+        &__btn {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+        }
+        .review {
+          &__image {
+            width: 44px;
+            height: 44px;
+          }
+          &__header {
+            margin-bottom: 16px;
+          }
+          &__author {
+            .name {
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            .position {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+          &__data {
+            .date {
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+          &__text {
+            font-size: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
           }
         }
       }
