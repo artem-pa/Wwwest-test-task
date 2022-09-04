@@ -1,6 +1,19 @@
 @import "variables";
 @import "bootstrap";
 
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: $secondary-light;
+}
+*::-webkit-scrollbar-thumb {
+  background: $gray;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
 html,
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -117,6 +130,7 @@ main {
   }
 
   .content {
+    width: 100%;
     background: #f6f7f9;
     gap: 32px;
     .preview {
@@ -314,6 +328,66 @@ main {
         }
       }
     }
+
+    .catalogue {
+      &__links {
+        height: 44px;
+        .link {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: $gray;
+        }
+      }
+      &__cards {
+        gap: 32px;
+      }
+      .card {
+        height: 380px;
+        padding: 24px;
+        flex-shrink: 0 !important;
+        flex-basis: 0 !important;
+        &__title {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 25px;
+        }
+        &__subtitle {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 18px;
+          color: $gray;
+        }
+        &__specification {
+          margin: 40px 0 32px;
+          .specification {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray;
+          }
+        }
+        &__rent {
+          .price {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+            span {
+              font-size: 14px;
+              line-height: 18px;
+              color: $gray;
+            }
+          }
+          .button {
+            width: 116px;
+            height: 44px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -324,7 +398,7 @@ main {
 }
 .button {
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.35s;
   &:active {
     scale: 0.8;
   }
@@ -332,11 +406,22 @@ main {
 .heart-icon {
   font-size: 17px;
   color: $red;
+  cursor: pointer;
+  transition: 0.35s;
+  &:active {
+    transform: scale(1.2);
+  }
+  &.bi-heart {
+    color: $gray;
+  }
 }
 .stars {
   display: inline-flex;
   list-style: none;
   gap: 5px;
+  .bi {
+    cursor: pointer;
+  }
   .bi-star-fill {
     color: #fbad39;
   }
@@ -407,6 +492,25 @@ main {
         }
         &__list {
           gap: 20px;
+        }
+      }
+
+      .catalogue {
+        &__cards {
+          overflow-x: auto;
+          margin: 0 -24px;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .card {
+            flex-basis: 300px !important;
+            &:first-child {
+              margin-left: 20px;
+            }
+            &:last-child {
+              margin-right: 20px;
+            }
+          }
         }
       }
     }
@@ -537,6 +641,61 @@ main {
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
+          }
+        }
+      }
+
+      .catalogue {
+        &__links {
+          height: 20px;
+          .link {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+        &__cards {
+          gap: 20px;
+        }
+        .card {
+          width: 240px;
+          height: 285px;
+          padding: 16px;
+          &__title {
+            font-size: 16px;
+            line-height: 20px;
+          }
+          &__subtitle {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+          }
+          &__image {
+            img {
+              max-height: 100px;
+            }
+          }
+          &__specification {
+            margin: 40px 0 24px;
+            .specification {
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+          &__rent {
+            .price {
+              font-size: 16px;
+              line-height: 20px;
+              span {
+                font-size: 12px;
+                line-height: 15px;
+              }
+            }
+            .button {
+              width: 100px;
+              height: 36px;
+              font-size: 12px;
+              line-height: 15px;
+            }
           }
         }
       }

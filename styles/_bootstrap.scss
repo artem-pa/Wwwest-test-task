@@ -7,6 +7,9 @@
 .bg-primary {
   --bs-bg-primary: #{$primary};
 }
+.text-primary {
+  color: $primary!important;
+}
 
 .container-xxl {
   @media screen and (min-width: 1400px) {
