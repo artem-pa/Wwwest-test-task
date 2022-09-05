@@ -17,6 +17,32 @@ const root = () => {
     el.addEventListener('click', setPreview)
     if (i === 0) setPreview();
   })
+
+
+  getS('.catalogue__cards').forEach((el, i) => {
+    el.addEventListener('scroll', e => {
+      const target = e.target;
+      const percent = target.scrollLeft / (target.scrollWidth - target.clientWidth);
+      const [leftPoint, rightPoint] = [0.1, 0.9];
+      let [opacityLeft, opacityRight] = [0, 1];
+
+      if (percent < leftPoint) {
+        opacityLeft = 0;
+        opacityRight = 1;
+      }
+      else if (percent > rightPoint) {
+        opacityLeft = 1;
+        opacityRight = 0;
+      }
+      else {
+        opacityLeft = ((percent - leftPoint) / (rightPoint - leftPoint)) ** 0.5;
+        opacityRight = ((percent - rightPoint) / (leftPoint - rightPoint)) ** 0.5;
+      }
+
+      getS('.shadow.left', i).style.opacity = opacityLeft;
+      getS('.shadow.right', i).style.opacity = opacityRight;
+    })
+  })
 }
 
 const mainPreview = getS('.preview .images__preview', 0);

@@ -387,6 +387,26 @@ main {
           }
         }
       }
+
+      .shadow {
+        display: none;
+        box-shadow: none!important;
+        pointer-events: none;
+        background: linear-gradient(to right, transparent, $white);
+          width: 90px;
+          z-index: 10;
+          bottom: 0;
+          transition: 0.15s;
+          &.left {
+            transform: scaleX(-1);
+            left: -24px;
+            opacity: 0;
+          }
+          &.right {
+            right: -24px;
+            opacity: 1;
+          }
+      }
     }
   }
 }
@@ -560,6 +580,7 @@ footer {
       }
 
       .catalogue {
+        position: relative;
         &__cards {
           overflow-x: auto;
           margin: 0 -24px;
@@ -575,6 +596,12 @@ footer {
               margin-right: 20px;
             }
           }
+        }
+
+        .shadow {
+          display: block;
+          position: absolute;
+          height: 380px;
         }
       }
     }
@@ -773,6 +800,9 @@ footer {
               line-height: 15px;
             }
           }
+        }
+        .shadow {
+          height: 285px;
         }
       }
     }
