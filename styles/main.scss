@@ -391,6 +391,70 @@ main {
   }
 }
 
+footer {
+  --gray-footer: #{$gray-footer};
+  --dark-footer: #{$dark-footer};
+  .container-xxl {
+    padding: 80px 60px 60px;
+    background: inherit;
+  }
+  .brand {
+    .text {
+      max-width: 292px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 200%;
+      color: var(--gray-footer);
+    }
+  }
+  .links {
+    gap: 48px 60px;
+    &__list {
+      width: 152px;
+    }
+    &__title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+      color: var(--dark-footer);
+    }
+    &__item {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+      color: var(--gray-footer);
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+      &:hover {
+        filter: drop-shadow(1px 1px 1px $gray);
+      }
+    }
+  }
+  hr {
+    background-color: var(--dark-footer);
+    margin-top: 60px;
+  }
+  .bottom-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 200%;
+    margin-bottom: 0;
+    color: var(--dark-footer);
+    a {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        filter: drop-shadow(1px 1px 1px $gray);
+      }
+    }
+  }
+  .bottom-links {
+    column-gap: 68px;
+  }
+}
+
 .logo {
   font-size: 2rem;
   font-weight: 700;
@@ -515,6 +579,15 @@ main {
       }
     }
   }
+
+  footer {
+    .container-xxl {
+      padding: 12px 24px 40px;
+    }
+    .links__list {
+      width: unset;
+    }
+  }
 }
 @media screen and (max-width: 767px) {
   header {
@@ -537,6 +610,9 @@ main {
     .sidebar {
       width: 75% !important;
       .filter .filter-item {
+        font-size: 1rem;
+      }
+      .btn-close {
         font-size: 1rem;
       }
     }
@@ -702,6 +778,25 @@ main {
     }
   }
 
+  footer {
+    --bs-bg-opacity: 0 !important;
+    --gray-footer: #{$gray};
+    --dark--footer: #{$dark};
+    .brand {
+      .text {
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+    .bottom-text {
+      font-size: 12px;
+      &.copyright {
+        width: 100%;
+        margin-top: 32px;
+      }
+    }
+  }
+
   .logo {
     font-size: 1.5rem;
   }
@@ -718,6 +813,17 @@ main {
       &__item {
         height: 64px;
         width: 64px;
+      }
+    }
+  }
+
+  footer {
+    .links__list {
+      &:nth-child(2) {
+        flex-basis: 200px;
+      }
+      &:nth-child(3) {
+        flex-basis: 110px;
       }
     }
   }
